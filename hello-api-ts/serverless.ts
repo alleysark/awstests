@@ -7,7 +7,11 @@ const config: AWS = {
     name: "aws",
     runtime: "nodejs18.x",
     stage: "dev",
-    region: "ap-northeast-2"
+    region: "ap-northeast-2",
+    httpApi: {
+      // API Gateway 지표를 활성화한다.
+      metrics: true,
+    }
   },
   functions: {
     hello: {
