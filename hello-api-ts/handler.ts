@@ -8,8 +8,12 @@ export const hello: APIGatewayProxyHandlerV2 = async (event) => {
       body: 'Not Found'
     };
   }
+  
+  const message = `Hello, ${event.queryStringParameters.name}!`;
+  console.info(message);
+
   return {
     statusCode: 200,
-    body: `Hello, ${event.queryStringParameters.name}!`,
+    body: message,
   };
 };
