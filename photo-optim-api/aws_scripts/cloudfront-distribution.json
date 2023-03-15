@@ -1,0 +1,29 @@
+{
+    "CallerReference": "photo-optim-api2",
+    "Comment": "optimize photos",
+    "Enabled": true,
+    "DefaultRootObject": "index.html",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [
+            {
+                "Id": "photo-optim-api2",
+                "DomainName": "alleysark-photo-optim-api2.s3.ap-northeast-2.amazonaws.com",
+                "S3OriginConfig": {
+                    "OriginAccessIdentity": "origin-access-identity/cloudfront/E2J4VD2U5YTEMI"
+                }
+            }
+        ]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "photo-optim-api2",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "MinTTL": 0,
+        "ForwardedValues": {
+            "QueryString": false,
+            "Cookies": {
+                "Forward": "none"
+            }
+        }
+    }
+}
